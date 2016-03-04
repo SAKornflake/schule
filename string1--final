@@ -1,0 +1,44 @@
+/*---------------------------------------------
+Autor: FZ
+Programmanme: string
+Version:1
+---------------------------------------------*/
+
+#include "stdafx.h"
+#include "iostream"
+#include "string"
+
+
+using namespace std;
+
+
+int main()
+{
+
+	double s_A_laenge;		                                                     /*define variables*/
+	double s_B_laenge;
+	string s;				                                                            /*define string*/
+
+	s = "Wenn du es nicht versuchst, wirst du nie wissen ob du es kannst.";
+	s_A_laenge = s.length();                                                    /*llength of the string*/
+	
+	cout << s << endl << endl;                                                  /*output string*/	
+	cout << "position nicht: " << s.find("nicht") << endl;                      /*output position "nicht" and "nie"*/
+	cout << "position nie: " << s.find("nie") << endl;
+	cout << "laenge string eins: " << s_A_laenge << endl << endl;;	            /*output (length of the string)*/				
+	
+        s.erase(11, 6);                                                       /*manipulate the string*/
+	s.erase(30, 25);
+	s.erase(30, 3);
+	s.insert(30, " Erfahrungen sammeln.");
+        cout << s << endl;                                                    /*output manipulated string*/
+	
+	s_B_laenge = s.length();	                                                   /*final lenght of the string*/
+
+        cout << "laenge string zwei: " << s_B_laenge << endl << endl << endl;  /*output final lengh ofthe manipulated string*/
+    
+
+	system("PAUSE");
+        return 0;
+
+}
